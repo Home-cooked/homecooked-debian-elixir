@@ -1,5 +1,5 @@
-FROM debian:9
-ENV ELIXIR_VERSION=1.9.4-otp-22
+FROM debian:9.8
+ENV ELIXIR_VERSION=1.10.1-otp-21
 
 # get tools needed to build required tools
 RUN apt-get update && apt-get install -yq \
@@ -12,11 +12,8 @@ RUN apt-get update && apt-get install -yq \
     libnss3-dev \
     libxss-dev \
     libasound2-dev \
-    git \
-    libtinfo5-dbg \
-    libtinfo5 \
-    libtinfo-dev
-
+    git
+    
 # setup erlang apt repo 
 RUN wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb; \
     dpkg -i --force-depends erlang-solutions_1.0_all.deb;
