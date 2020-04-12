@@ -12,7 +12,10 @@ RUN apt-get update && apt-get install -yq \
     libnss3-dev \
     libxss-dev \
     libasound2-dev \
-    git
+    git \
+    libtinfo5-dbg \
+    libtinfo5 \
+    libtinfo-dev
 
 # setup erlang apt repo 
 RUN wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb; \
