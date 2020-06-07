@@ -1,5 +1,5 @@
-FROM debian:9.8
-ENV ELIXIR_VERSION=1.9.0-otp-21
+FROM debian:10.0
+ENV ELIXIR_VERSION=1.10.1-otp-21
 
 # get tools needed to build required tools
 RUN apt-get update && apt-get install -yq \
